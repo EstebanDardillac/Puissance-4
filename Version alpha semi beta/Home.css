@@ -32,11 +32,13 @@ body{
     display: flex;
     flex-direction: column;
     padding-top: 100px;
+    margin-right: 8%;
 }
 .secondMain{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 95%;
 }
 
 .thirdMain{
@@ -174,7 +176,6 @@ body{
 .images1{
     display: flex;
     justify-content: center;
-    margin-right: 5%;
 }
 
 .text1{
