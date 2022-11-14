@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red53\green53\blue53;}
+{\*\expandedcolortbl;;\cssrgb\c27059\c27059\c27059;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh17520\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs24 \cf2 Requ\'eate changer email:\
+UPDATE ` utilisateur`\
+SET `email`=\'ab\'a0[value-4]\
+WHERE ` identifiant=\'ab\'a0\'a0\'bb;\
+\
+Requ\'eate changer mdr:\
+UPDATE ` utilisateur`\
+SET `mot_de_passe`=\'ab\'a0[value-4]\
+WHERE ` identifiant=\'ab\'a0\'a0\'bb;\
+\
+Requ\'eate recherche utilisateur via son mdr ou son email:\
+SELECT * FROM `utilisateur`\
+WHERE `email`=\'ab\'a0\'a0\'bb OR `mot_de_passe`=\'ab\'a0\'a0\'bb;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Requ\'eate pour ajouter le  jeu \'ab\'a0The power of memory\'a0\'bb \'e0 la BDD:\
+INSERT INTO `jeu` (`identifiant`,`nom_jeu`)\
+VALUES (\'ab\'a01\'a0\'bb, \'ab\'a0The_power_of_memory\'a0\'bb);\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Requ\'eate pour afficher les score des utilisateurs:\
+SELECT `nom_jeu`, `pseudo`, `difficulte_partie`, `score_partie` FROM `utilisateur`, `score`, `jeu`\
+ORDER BY `nom_jeu` ASC, `difficulte_partie` DESC, `score_partie` DESC; \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Requ\'eate pour afficher les score des utilisateurs avec filtre :\
+SELECT `nom_jeu`, `pseudo`, `difficulte_partie`, `score_partie` FROM `utilisateur`, `score`, `jeu`\
+ORDER BY `nom_jeu` ASC, `difficulte_partie` DESC, `score_partie` DESC; \
+WHERE `difficulte_partie `=\'ab\'a0\'a0\'bb OR `jeu`=\'ab\'a0\'a0\'bb OR `pseudo`=\'ab\'a0\'a0\'bb\
+\
+Requ\'eate pour enregistrer les nouveaux scores des utilisateurs:\
+UPDATE `utilisateur`, `score`,`jeu` \
+SET `nom_jeu`=\'ab\'a0\'a0\'bb, `pseudo`=\'ab\'a0\'a0\'bb, `difficulte_partie`=\'ab\'a0\'a0\'bb, `score_partie=\'ab\'a0\'a0\'bb\
+WHERE `id_joueur`= \'ab\'a0\'a0\'bb;\
+\
+Requ\'eate pour envoyer un message le chat:\
+INSERT INTO `message`(`id_message`,`id_joueur`, `message`, `date_et_heure_du_message`)\
+VALUES (\'ab\'a0\'a0\'bb, \'ab\'a0\'a0\'bb, \'ab\'a0\'a0\'bb, \'ab\'a0\'a0\'bb);\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 \
+\
+SELECT `message`,  `id_joueur`,  `date_et_heure_du_message`\
+CASE  \
+	WHEN id_joueur` =2 THEN \'91true\'92\
+	ELSE \'91false\'92\
+END\
+FROM `message`\
+WHERE `date_et_heure_du_message` >= 24}
